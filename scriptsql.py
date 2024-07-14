@@ -20,6 +20,11 @@ def init_db():
     conn.commit()
     conn.close()
 
+    # Agregar usuarios predefinidos
+    add_user("ithan", "contrasena_ithan")
+    add_user("gonzalo", "contrasena_gonzalo")
+    add_user("luis", "contrasena_luis")
+
 # Función para hashear contraseñas
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
